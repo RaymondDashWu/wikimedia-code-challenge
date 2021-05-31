@@ -36,7 +36,6 @@ CREATE TABLE `Donations` (
 # TODO
 ## Credit template html/css 
 https://codesandbox.io/s/html-forms-fyvcr?file=/index.html:0-2279
-- one unit test
 - country 
 - static confirmation page
 

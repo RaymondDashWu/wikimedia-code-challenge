@@ -2,9 +2,9 @@ const Donation = require('../models/donationsModel');
 const app = require('express')();
 
 app.post('/', (req, res) => {
-  const newDonation = new Donation(req.query);
+  const newDonation = new Donation(req.body);
   // console.log("req.query", req.query)
-  if (req.query === Object && Object.keys(req.query).length === 0) {
+  if (req.body === Object && Object.keys(req.body).length === 0) {
     return res.status(400).send({
       error: true,
       message: 'Not all fields were filled'
