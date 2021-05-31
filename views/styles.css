@@ -51,7 +51,8 @@ body {
 }
 
 .form-row input[type="text"],
-.form-row input[type="email"] {
+.form-row input[type="email"],
+.form-row input[type="tel"] {
   background-color: #ffffff;
   border: 1px solid #d6d9dc;
   border-radius: 3px;
@@ -64,8 +65,9 @@ body {
   margin-bottom: 15px;
 }
 
-.form-row input[type="text"]:invalid,
-.form-row input[type="email"]:invalid {
+.form-row input[type="text"]:not(:empty):invalid,
+.form-row input[type="email"]:not(:empty):invalid,
+.form-row input[type="tel"]:not(:empty):invalid {
   border: 1px solid #d55c5f;
   color: #d55c5f;
   box-shadow: none;
@@ -167,6 +169,7 @@ body {
 
   .form-row input[type="text"],
   .form-row input[type='email'],
+  .form-row input[type="tel"],
   /* Add */
   .form-row select,
   /* These */

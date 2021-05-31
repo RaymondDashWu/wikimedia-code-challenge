@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
     });
 });
 
-// using as middleware
 app.use(donations)
 
 app.listen(port, () => {
