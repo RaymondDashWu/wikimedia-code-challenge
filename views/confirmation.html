@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Donation Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body onload="loadParam()">
+  <header class="speaker-form-header">
+    <h1>You reached the confirmation form!!!</h1>
+    <p><em>Would you like to donate to the Wikimedia Foundation? Fill out this form.</em></p>
+  </header>
+  <form action="/" method="GET" class="speaker-form">
+    test
+
+    <center>
+<textarea id='p' rows="15" name="test" cols="50">
+
+</textarea>
+</center>
+    <div class="form-row">
+      <button>Review</button>
+    </div>
+    <div class="form-row">
+      <button type="submit" formmethod="POST">Submit</button>
+    </div>
+  </form>
+</body>
+<script>
+function loadParam() {
+  var hashParams = window.location.href.substr(1).split('?'); // substr(1) to remove the `#`
+      hashParams = hashParams[1].split('&');
+      var p = hashParams[0].split('=');
+      document.getElementById('p').value = p[1];
+ }
+</script>
+</html>
