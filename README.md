@@ -29,3 +29,7 @@ CREATE TABLE `Donations` (
 # TODO
 ## Credit template html/css 
 https://codesandbox.io/s/html-forms-fyvcr?file=/index.html:0-2279
+
+# Time
+7:23 - 7:57
+9:52 - 10:44

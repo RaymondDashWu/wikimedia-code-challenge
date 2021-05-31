@@ -1,6 +1,6 @@
 const dbConn = require('../dbConfig');
 
-const Donation = function(donation){
+const Donation = function (donation) {
   this.last_name = donation.last_name
   this.first_name = donation.first_name
   this.street_address = donation.street_address
@@ -19,3 +19,17 @@ const Donation = function(donation){
   this.created_at = new Date()
   this.updated_at = new Date()
 };
+
+Donation.create = function (newDonation, result) {
+  dbConn.query("INSERT INTO Donations set ?", newDonation, function (err, res) {
+    if (err) {
+      console.log("Error creating Donation obj: ", err);
+      result(err, null);
+    } else {
+      console.log(res.insertId);
+      result(null, res.insertId);
+    }
+  });
+};
+
+module.exports = Donation;
